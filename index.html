@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORROR - The Nightmare Awaits</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div class="overlay">
+        <div class="noise"></div>
+        <div class="glitch"></div>
+    </div>
+
+    <div class="content">
+        <div class="top-bar">
+            <h1 class="title" data-text="HORROR">HORROR</h1>
+            <p class="subtitle">Enter the Nightmare...</p>
+        </div>
+
+        <nav class="menu">
+            <a href="#story" class="menu-item" onclick="scrollToSection('story')">Story</a>
+            <a href="#game" class="menu-item" onclick="scrollToSection('game')">Play</a>
+            <a href="#gallery" class="menu-item" onclick="scrollToSection('gallery')">Gallery</a>
+            <a href="#about" class="menu-item" onclick="scrollToSection('about')">About</a>
+        </nav>
+
+        <div class="hero">
+            <h2>Welcome to Hell</h2>
+            <p>A terrifying journey into the depths of darkness...</p>
+            <button class="btn-play" onclick="startGame()">ENTER THE GAME</button>
+        </div>
+
+        <section id="story" class="section">
+            <h2 class="section-title">The Story</h2>
+            <div class="story-text">
+                <p>
+                    Du wachst in einem verlassenen Herrenhaus auf. Deine Erinnerungen sind verschwunden.
+                    Überall ist Stille... eine beängstigende, unheimliche Stille.
+                </p>
+                <p>
+                    Plötzlich hörst du Schritte. Sie kommen näher. Immer näher.
+                    Du bist nicht allein in diesem Haus. Etwas anderes ist hier.
+                </p>
+                <p>
+                    Du musst die Wahrheit aufdecken, bevor es zu spät ist.
+                </p>
+            </div>
+        </section>
+
+        <section id="game" class="section">
+            <h2 class="section-title">Interactive Experience</h2>
+            <div class="game-controls">
+                <button class="btn-control" onclick="toggleSound()">🔊 Sound</button>
+                <button class="btn-control" onclick="toggleLight()">💡 Light</button>
+                <button class="btn-control" onclick="triggerScream()">😱 Jumpscare</button>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item" style="background: linear-gradient(135deg, #1a0033 0%, #330066 100%);">
+                    <div class="gallery-overlay">Haunted Room</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #330066 0%, #1a0033 100%);">
+                    <div class="gallery-overlay">Dark Corridor</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #0d0015 0%, #330066 100%);">
+                    <div class="gallery-overlay">The Shadow</div>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #330066 0%, #0d0015 100%);">
+                    <div class="gallery-overlay">Lost Souls</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title">About This Experience</h2>
+            <p>
+                HORROR ist ein immersives Spiel-Erlebnis, das modernste Web-Technologie nutzt,
+                um dir eine unvergesslich gruselige Erfahrung zu bieten.
+            </p>
+            <p>
+                Mit 3D-Grafiken, atmosphärischen Effekten und interaktiven Elementen wird
+                dein Nervenkostüm bis an die Grenzen getrieben.
+            </p>
+        </section>
+    </div>
+
+    <div id="jump-scare" class="jump-scare">
+        <img id="scare-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='30' cy='30' r='15' fill='white'/%3E%3Ccircle cx='70' cy='30' r='15' fill='white'/%3E%3Ccircle cx='50' cy='50' r='8' fill='red'/%3E%3Cpath d='M 40 70 Q 50 80 60 70' stroke='red' fill='none' stroke-width='2'/%3E%3C/svg%3E" alt="SCARY">
+    </div>
+
+    <div class="cursor-glow"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
